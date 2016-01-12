@@ -33,7 +33,6 @@ class ItemItemRecommender(object):
         number of rows equal to number of items and number of
         columns equal to neighborhood size. Entries of this matrix
         will be indexes of other items.
-        You will call this in your fit method.
         '''
         least_to_most_sim_indexes = np.argsort(items_cos_sim, 1)
         neighborhoods = least_to_most_sim_indexes[:, -self.neighborhood_size:]
